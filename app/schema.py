@@ -1,10 +1,5 @@
 from typing import Annotated, Optional
-from unittest.mock import Base
-
 from pydantic import BaseModel, EmailStr, Field
-from pydantic.types import conint
-
-from app.models import User
 
 class PostBase(BaseModel): 
     title : str

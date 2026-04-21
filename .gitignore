@@ -2,4 +2,4 @@ __pychache__
 venv/
 .env
 learned
-Procfile
+docker-compose-prod.yml

@@ -1,7 +1,4 @@
-from sys import api_version
-from urllib import response
-
-from fastapi import FastAPI , Response, status, HTTPException, Depends, APIRouter
+from fastapi import status, HTTPException, Depends, APIRouter
 from sqlmodel import Session
 from .. import schema,database,models,auth2
 

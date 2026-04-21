@@ -4,6 +4,9 @@ services:
     build: .
     ports:
       - 8000:8000
+    volumes:
+      - ./:/usr/src/app:ro
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
     env_file:
       - ./.env.docker
     depends_on:
@@ -13,7 +16,9 @@ services:
     image : postgres:15
     environment:
       - POSTGRES_PASSWORD=41321234
-      - POSTGRES_DB=FASTAPI
+      - POSTGRES_DB=fastapi
+    ports:
+      - "5433:5432"
     volumes :
       - postgres_db:/var/lib/postgresql/data
 
